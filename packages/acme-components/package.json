@@ -1,0 +1,53 @@
+{
+  "name": "@acme/components",
+  "version": "0.0.1",
+  "private": "true",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./chart": "./src/chart.tsx",
+    "./navbar": "./src/navbar.tsx",
+    "./prefetch": "./src/prefetch-cross-zone-links.tsx"
+  },
+  "typesVersions": {
+    "*": {
+      "chart": [
+        "./src/chart.tsx"
+      ],
+      "navbar": [
+        "./src/navbar.tsx"
+      ],
+      "prefetch": [
+        "./src/prefetch-cross-zone-links.tsx"
+      ]
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist && rm -rf .turbo",
+    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0-0",
+    "react-dom": "^18.0.0-0"
+  },
+  "dependencies": {
+    "@acme/design-system": "workspace:*",
+    "@acme/utils": "workspace:*",
+    "@vercel/examples-ui": "^1.0.5",
+    "chart.js": "^4.4.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^1.2.1",
+    "lucide-react": "^0.479.0",
+    "react-chartjs-2": "^5.3.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.10",
+    "eslint": "^9.22.0",
+    "eslint-config-acme": "workspace:*",
+    "typescript": "^5.0.4"
+  }
+}
