@@ -1,6 +1,6 @@
 version: 1
 applications:
-  - appRoot: /
+  - appRoot: apps/main
     frontend:
       phases:
         preBuild:
@@ -9,9 +9,9 @@ applications:
             - pnpm install
         build:
           commands:
-            - pnpm run build:main
+            - pnpm run build
       artifacts:
-        baseDirectory: apps/main/.next
+        baseDirectory: .next
         files:
           - "**/*"
       cache:
